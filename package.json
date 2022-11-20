@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@material/dialog": "^14.0.0",
+    "boxicons": "^2.1.4",
+    "ng-angular-popup": "^0.2.0"
+  }
+}
