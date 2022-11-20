@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1 class="title"> Online library</h1>
+<h2> Login form</h2>
+<form (ngSubmit)="userLogin()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label><br>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="email" [(ngModel)]="user.email"  placeholder="Enter email"><br>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label><br>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="user.password" placeholder="Password">
+  </div>
+  <input type="submit" value="Log in">
+</form>
+<a class="forgot" href="forgot">I forgot my password!</a><br>
+
+</body>
+</html>
