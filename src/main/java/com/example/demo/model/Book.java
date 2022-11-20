@@ -20,6 +20,7 @@ public class Book {
     private int nrOfPages;
     private int price;
     private String description;
+    private byte[] image;
 
     public String getTitle() {
         return title;
@@ -61,4 +62,11 @@ public class Book {
         this.description = description;
     }
 
+  public byte[] getImage() {
+    return image;
+  }
+
+  public void setImage(byte[] image) {
+    this.image = image;
+  }
 }
