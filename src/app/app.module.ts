@@ -12,7 +12,6 @@ import { FirstComponent } from './component/first/first.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './component/pop-up/pop-up.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { SearchComponent } from './component/search/search.component';
 import { CartComponent } from './component/cart/cart.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { CartComponent } from './component/cart/cart.component';
     LoginComponent,
     FirstComponent,
     PopUpComponent,
-    SearchComponent,
     CartComponent,
   ],
   imports: [

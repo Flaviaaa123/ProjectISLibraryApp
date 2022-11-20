@@ -16,7 +16,6 @@ export class CartService {
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-    console.log(this.cartItemList);
   }
 
   getTotalPrice() :number{
@@ -29,7 +28,7 @@ export class CartService {
 
   removeCartItem(product : any){
     this.cartItemList.map((a:any, index:any) => {
-      if(product.id == a.id){
+      if(product.title == a.title){
         this.cartItemList.splice(index,1);
       }
     })
