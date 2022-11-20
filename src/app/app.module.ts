@@ -4,15 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './component/home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import { LoginComponent } from './login/login.component';
-import { FirstComponent } from './first/first.component';
+import { LoginComponent } from './component/login/login.component';
+import { FirstComponent } from './component/first/first.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { PopUpComponent } from './pop-up/pop-up.component';
+import { PopUpComponent } from './component/pop-up/pop-up.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { SearchComponent } from './search/search.component';
+import { SearchComponent } from './component/search/search.component';
+import { CartComponent } from './component/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SearchComponent } from './search/search.component';
     FirstComponent,
     PopUpComponent,
     SearchComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

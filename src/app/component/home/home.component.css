@@ -59,7 +59,7 @@ input[type=text],input[type=password]{
 
 
 body {
-  background-image: url("../../assets/book2.jpg");
+  background-image: url("../../../assets/book2.jpg");
   height: 800px;
   margin: -10px;
   background-position: center;

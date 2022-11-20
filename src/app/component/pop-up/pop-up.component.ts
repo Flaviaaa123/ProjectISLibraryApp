@@ -13,6 +13,7 @@ export class PopUpComponent implements OnInit {
   nrOfPages;
   price;
   description;
+  image;
   // @ts-ignore
   constructor(@Inject(MAT_DIALOG_DATA) public data) {
     this.title=data;
@@ -20,6 +21,7 @@ export class PopUpComponent implements OnInit {
     this.nrOfPages=data;
     this.price=data;
     this.description=data;
+    this.image=data;
   }
 
   ngOnInit():void{
