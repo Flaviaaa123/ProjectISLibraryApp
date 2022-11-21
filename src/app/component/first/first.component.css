@@ -1,0 +1,107 @@
+.navbar-brand{
+  font-size: 40px;
+  position: relative;
+}
+#book-item{
+  color: chocolate;
+  font-size: 60px;
+  margin-left: 20px;
+  padding: 10px;
+}
+.search-container button:hover {
+  background: #ccc;
+}
+.search-container{
+  margin-left: 700px;
+  margin-top: 8px;
+  font-size: 17px;
+}
+#books{
+  font-size: 30px;
+  background-color: coral;
+  border: none;
+  border-radius: 0px;
+  text-align: center;
+}
+#filter{
+  font-size: 30px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 0px;
+  text-align: center;
+}
+
+.card{
+  width: 200px;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.card img{
+  width: auto;
+  height: 300px;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+}
+.card img:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.btn{
+  margin: 5px;
+}
+.badge:after{
+  content:attr(value);
+  font-size:12px;
+  color: #fff;
+  background: red;
+  border-radius:50%;
+  padding: 0 7px;
+  position:relative;
+  left:-8px;
+  top:-15px;
+  opacity: 0.9;
+}
+.badge{
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa{
+  color: black;
+}
+.w3-badge{
+  position: absolute;
+  font-size: 12px;
+  margin-left: 18px;
+  color: white;
+  z-index: 10;
+  margin-top: -10px;
+}
+
+.form-group{
+  width: 10%;
+  margin-left: 60px;
+  padding: 5px;
+}
+
+#filt{
+  margin-top: 10px;
+  margin-left: 70px;
+  background-color: #ff43e8;
+  border : none;
+  margin-bottom: 30px;
+}
+#filt:hover{
+  background-color: #ff86d0;
+}
+
+#filt1,#filt2,#filt3,#filt4{
+  margin-bottom: 130px;
+  margin-left: 100px;
+  margin-top: -50px;
+}
+
