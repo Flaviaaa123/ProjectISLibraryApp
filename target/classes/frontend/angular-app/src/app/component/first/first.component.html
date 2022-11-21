@@ -1,0 +1,56 @@
+<nav class="navbar" style="background-color: bisque;">
+<div class="container-fluid">
+    <a class="navbar-brand">
+      <i class='bx bx-book' id="book-item"></i>
+      Online library
+    </a>
+  <div class="search-container">
+      <input type="text" placeholder="Search.." name="search" (keyup)="sendData($event)">
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
+  <i class="fa badge fa-xl" (click)="goToPage('cart')">  <span class="w3-badge w3-red">{{totalItem}}</span>
+    &#xf07a;</i>
+</div>
+</nav>
+<div class="alert alert-light" role="alert" id="books">
+  Books
+</div>
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let book of books">
+      <div *ngIf="(searchText==='' || book.title.toLowerCase().includes(searchText))" class="card col-md-2" style="width: 18rem;" >
+        <img [src]=book.image alt="">
+        <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{book.title}}</h2>
+        <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch">{{book.author}}</h3>
+        <h3>Price: ${{book.price}}</h3>
+        <a class="btn btn-primary" (click)="addToCart(book)">Add to cart <i class='bx bx-cart' ></i></a>
+        <button class="btn btn-primary" (click)="openDialogNew(book)" >View details <i class='bx bx-detail' ></i> </button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="alert alert-light" role="alert" id="filter">
+  Filter
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="from">From</label>
+    <input type="number" id="from" class="form-control" min="0" (keyup)="getFromNumber($event)">
+  </div>
+  <div class="form-group">
+    <label for="to">To</label>
+    <input type="number"  id="to" class="form-control" min="0" (keyup)="getToNumber($event)">
+  </div>
+  <button class="btn btn-primary btn-block" id="filt" (click)="filterByPrice()">Filter by Price</button>
+  <button class="btn btn-primary btn-block" id="filt1" (click)="sortByPrice()">Sort by Price - Ascending </button>
+  <button class="btn btn-primary btn-block" id="filt2" (click)="sortByPriceDesc()">Sort by Price - Descending </button>
+  <button class="btn btn-primary btn-block" id="filt3" (click)="sortByName()">Sort by Name - A to Z</button>
+  <button class="btn btn-primary btn-block" id="filt4" (click)="sortByNameReverse()">Sort by Name - Z to A</button>
+</form>
+
+
+
+

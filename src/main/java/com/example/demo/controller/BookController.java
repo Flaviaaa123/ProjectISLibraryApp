@@ -17,8 +17,8 @@ import java.util.stream.Stream;
 @CrossOrigin(origins = "http://localhost:4200")
 public class BookController {
 
-    @Autowired
-    BookRepo bookRepo;
+  @Autowired
+  BookRepo bookRepo;
 
     @GetMapping("/findAllBooks")
     public List<Book> getBooks(){
