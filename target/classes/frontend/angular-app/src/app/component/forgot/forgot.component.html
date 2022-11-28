@@ -1,0 +1,10 @@
+<div>
+<form (ngSubmit)="sendEmail()">
+  <h1 class="h3 mb-3 fw-normal">Please enter your email</h1>
+  <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email.email" [ngModelOptions]="{standalone: true}">
+  <div *ngIf="!inProgress">
+  <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  <mat-spinner [diameter]="40" *ngIf="inProgress"></mat-spinner>
+</form>
+</div>
