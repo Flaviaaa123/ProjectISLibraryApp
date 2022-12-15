@@ -1,10 +1,10 @@
-<h1 mat-dialog-title>{{data.title}}</h1>
-<mat-dialog-content class="mat-typography">
-  <h2>{{data.author}}</h2>
-  <h3 id="pages">{{data.nrOfPages}} pages</h3>
-  <h3 align="center" id="description">{{data.description}}</h3>
-  <h3 id="price">{{data.price}} RON</h3>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
+<h1 mat-dialog-title>{{data.book.title}}</h1>
+<div mat-dialog-content class="mat-typography">
+  <h2>{{data.book.author}}</h2>
+  <h3 id="pages">{{data.book.nrOfPages}} pages</h3>
+  <h3 id="description">{{data.book.description}}</h3>
+  <h3 id="price">{{data.book.price}} RON</h3>
+</div>
+<div mat-dialog-actions align="end">
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
-</mat-dialog-actions>
+</div>

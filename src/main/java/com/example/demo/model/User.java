@@ -1,8 +1,6 @@
 package com.example.demo.model;
 
-
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
@@ -12,7 +10,6 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Data
 @Table(name = "userregister")
 public class User {
     @Id
@@ -34,4 +31,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

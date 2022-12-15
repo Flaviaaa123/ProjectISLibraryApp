@@ -6,16 +6,19 @@
 <form (ngSubmit)="userRegister()">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label><br>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email"><br>
+    <input type="text" (keyup)="getEmail($event)" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email"   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" [(ngModel)]="user.email"><br>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label><br>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" [(ngModel)]="user.password">
+    <input type="password" (keyup)="getPass($event)" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" [(ngModel)]="user.password">
+  </div>
+  <div class="form-group">
+    <label id="first">Name</label><br>
+    <input type="text" class="form-control"  name="password" placeholder="Your name"><br>
   </div>
   <input type="submit" value="Submit">
 </form>
 <a class="login" href="login"> Already have an account?</a><br>
 <input type="button" (click)="goToPage('login')" value="Log in"><br>
-<a class="forgot" href="forgot">I forgot my password!</a><br>
 </body>
 </html>

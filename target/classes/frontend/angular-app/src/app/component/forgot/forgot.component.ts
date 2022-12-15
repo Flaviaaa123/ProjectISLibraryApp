@@ -28,6 +28,7 @@ export class ForgotComponent implements OnInit {
     Swal.fire('Sent!','Please go check your email','success')
     this.goToPage("/login")
   }, error => Swal.fire('Oops!','Email doesn t exist','error'))
+    this.inProgress = false;
   }
 
   goToPage(pageName: string):void {

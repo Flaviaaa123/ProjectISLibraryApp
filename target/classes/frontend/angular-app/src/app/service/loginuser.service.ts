@@ -7,10 +7,17 @@ import {Observable} from "rxjs";
 })
 export class LoginuserService {
   private baseurl="http://localhost:8080/user/login";
+  private baseUrl2 = "http://localhost:8080/save";
+  value : string | null;
+
   constructor(private httpClient : HttpClient) { }
 
   loginUser(user : User) : Observable<Object>{
-    console.log(user);
+    this.value = user.email;
     return this.httpClient.post(`${this.baseurl}`,user);
+  }
+
+  saveEmail():Observable<Object>{
+    return this.httpClient.post(`${this.baseUrl2}`,this.value)
   }
 }

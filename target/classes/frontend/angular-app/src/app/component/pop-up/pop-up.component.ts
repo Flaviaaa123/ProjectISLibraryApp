@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import {Book} from "../../model/book";
 
 @Component({
   selector: 'app-pop-up',
@@ -8,20 +9,8 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 })
 
 export class PopUpComponent implements OnInit {
-  author;
-  title;
-  nrOfPages;
-  price;
-  description;
-  image;
-  // @ts-ignore
-  constructor(@Inject(MAT_DIALOG_DATA) public data) {
-    this.title=data;
-    this.author=data;
-    this.nrOfPages=data;
-    this.price=data;
-    this.description=data;
-    this.image=data;
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data:{book:Book}) {
   }
 
   ngOnInit():void{

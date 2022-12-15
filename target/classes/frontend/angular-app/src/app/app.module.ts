@@ -12,8 +12,11 @@ import { FirstComponent } from './component/first/first.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './component/pop-up/pop-up.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { SearchComponent } from './component/search/search.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './component/cart/cart.component';
+import { ForgotComponent } from './component/forgot/forgot.component';
+import { ResetComponent } from './component/reset/reset.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -22,8 +25,9 @@ import { CartComponent } from './component/cart/cart.component';
     LoginComponent,
     FirstComponent,
     PopUpComponent,
-    SearchComponent,
     CartComponent,
+    ForgotComponent,
+    ResetComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,8 +36,12 @@ import { CartComponent } from './component/cart/cart.component';
     HttpClientModule,
     FormsModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
+  exports: [MatDialogModule],
+
   providers: [],
   bootstrap: [AppComponent],
   entryComponents:[PopUpComponent]

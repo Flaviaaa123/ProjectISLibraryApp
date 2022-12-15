@@ -1,19 +1,19 @@
 package com.example.demo.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Arrays;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Data
 @Table(name = "books")
 public class Book {
+
     @Id
     private String title;
     private String author;
@@ -68,5 +68,17 @@ public class Book {
 
   public void setImage(byte[] image) {
     this.image = image;
+  }
+
+  @Override
+  public String toString() {
+    return "Book{" +
+      "title='" + title + '\'' +
+      ", author='" + author + '\'' +
+      ", nrOfPages=" + nrOfPages +
+      ", price=" + price +
+      ", description='" + description + '\'' +
+      ", image=" + Arrays.toString(image) +
+      '}';
   }
 }

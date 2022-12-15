@@ -12,7 +12,6 @@ export class ResetpassService {
   constructor(private httpClient : HttpClient) { }
 
   resetPassword(pass: String) : Observable<Object>{
-    console.log(pass);
     return this.httpClient.post(`${this.baseUrl}`,pass)
   }
 }

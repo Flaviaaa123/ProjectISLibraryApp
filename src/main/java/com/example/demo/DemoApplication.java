@@ -8,6 +8,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -30,6 +31,5 @@ public class DemoApplication {
         UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
         urlBasedCorsConfigurationSource.registerCorsConfiguration("/**",corsConfiguration);
         return new CorsFilter(urlBasedCorsConfigurationSource);
-
     }
 }

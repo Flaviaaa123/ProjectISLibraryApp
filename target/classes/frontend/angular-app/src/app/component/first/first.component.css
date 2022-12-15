@@ -75,7 +75,7 @@
 }
 .w3-badge{
   position: absolute;
-  font-size: 12px;
+  font-size: 10px;
   margin-left: 18px;
   color: white;
   z-index: 10;
@@ -100,8 +100,16 @@
 }
 
 #filt1,#filt2,#filt3,#filt4{
-  margin-bottom: 130px;
-  margin-left: 100px;
-  margin-top: -50px;
+  margin-bottom: 170px;
+  margin-left: 70px;
+  margin-top: -60px;
+}
+#refresh{
+  background-color: aquamarine;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+#refresh:hover{
+  background-color: #04AA6D;
 }
 

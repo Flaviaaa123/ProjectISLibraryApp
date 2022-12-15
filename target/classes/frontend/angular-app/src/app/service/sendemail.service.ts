@@ -12,7 +12,6 @@ export class SendemailService {
   constructor(private httpClient : HttpClient) { }
 
   emailSend(email:Email):Observable<Object>{
-    console.log(email);
     return this.httpClient.post(`${this.baseUrl}`,email);
   }
 }

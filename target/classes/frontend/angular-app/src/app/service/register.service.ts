@@ -11,7 +11,6 @@ export class RegisterService {
   constructor(private httpClient:HttpClient) { }
 
   registerUser(user:User):Observable<Object>{
-    console.log(user);
-      return this.httpClient.post(`${this.baseUrl}`,user);
+    return this.httpClient.post(`${this.baseUrl}`,user);
   }
 }

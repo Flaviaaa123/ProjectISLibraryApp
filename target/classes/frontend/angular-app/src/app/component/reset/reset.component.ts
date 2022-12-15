@@ -15,7 +15,7 @@ export class ResetComponent implements OnInit {
   password:string;
 
   constructor(private fb: FormBuilder,
-              private resetpassService : ResetpassService,
+              private resetPassService : ResetpassService,
               private router:Router) {
 
     this.form = fb.group({
@@ -32,7 +32,7 @@ export class ResetComponent implements OnInit {
 
   submit(){
     console.log(this.password);
-    this.resetpassService.resetPassword(this.password).subscribe(res=>{
+    this.resetPassService.resetPassword(this.password).subscribe(res=>{
       Swal.fire('Success!','Password reseted!','success')
       this.goToPage("/login")
     },error => Swal.fire('Oops!','Password was not reseted','error'))

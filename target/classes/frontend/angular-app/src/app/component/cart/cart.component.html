@@ -3,14 +3,13 @@
  <div class="container">
    <div class="card-table">
      <div class="cart-product">
-       <table class="table table-responsive">
+       <table class="table table-responsive" id="excel-table">
          <thead>
          <tr>
            <th>Book number</th>
            <th>Book name</th>
            <th>Price</th>
            <th>Quantity</th>
-           <th>Total</th>
            <th>Action</th>
          </tr>
          </thead>
@@ -19,24 +18,29 @@
            <td>{{i+1}}</td>
            <td>{{item.title}}</td>
            <td>{{item.price}}</td>
-           <td>{{item.quantity}}</td>
-           <td>{{item.total}}</td>
+           <td><button type="button" (click)="decrease(item)"><i class="fa fa-minus"></i></button>{{item.quantity}}
+             <button type="button" (click)="increase(item)"><i class="fa fa-plus"></i></button> </td>
            <td>
              <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i> </button>
            </td>
          </tr>
          <tr>
-           <td colspan="2"></td>
+           <td colspan="1"></td>
            <td> <button (click)="emptyCart()" class="btn btn-danger">Empty Cart</button> </td>
-           <td> <button routerLink="/first" class="btn btn-primary">Shop more</button> </td>
-           <td> <button class="btn btn-success">Checkout</button> </td>
+           <td> <button id="shopmore" routerLink="/first" class="btn btn-primary">Shop more</button> </td>
+            <td>
+           <div *ngIf="!inProgess">
+           <td> <button class="btn btn-success" (click)="plata()">Checkout</button> </td>
+           </div>
+           <mat-spinner [diameter]="30" *ngIf="inProgess"></mat-spinner>
+            </td>
            <td><strong>Total: ${{grandTotal}}</strong></td>
          </tr>
          </tbody>
        </table>
+     <button type="btn btn-primary" id="exportExcel" (click)="exportExcel()">Export to EXCEL</button>
      </div>
    </div>
-
  </div>
 </ng-container>
 

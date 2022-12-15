@@ -8,7 +8,7 @@
       <input type="text" placeholder="Search.." name="search" (keyup)="sendData($event)">
       <button type="submit"><i class="fa fa-search"></i></button>
   </div>
-  <i class="fa badge fa-xl" (click)="goToPage('cart')">  <span class="w3-badge w3-red">{{totalItem}}</span>
+  <i class="fa badge fa-xl" (click)="goToPage('cart')">  <span class="w3-badge w2-red">{{totalItem}}</span>
     &#xf07a;</i>
 </div>
 </nav>
@@ -20,7 +20,7 @@
   <div class="row">
     <ng-container *ngFor="let book of books">
       <div *ngIf="(searchText==='' || book.title.toLowerCase().includes(searchText))" class="card col-md-2" style="width: 18rem;" >
-        <img [src]=book.image alt="">
+        <img [src]=domSanitizer.bypassSecurityTrustUrl(book.image)>
         <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{book.title}}</h2>
         <h3 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch">{{book.author}}</h3>
         <h3>Price: ${{book.price}}</h3>
@@ -45,6 +45,7 @@
     <input type="number"  id="to" class="form-control" min="0" (keyup)="getToNumber($event)">
   </div>
   <button class="btn btn-primary btn-block" id="filt" (click)="filterByPrice()">Filter by Price</button>
+  <button class="btn btn-primary" id="refresh" (click)="refreshPage()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
   <button class="btn btn-primary btn-block" id="filt1" (click)="sortByPrice()">Sort by Price - Ascending </button>
   <button class="btn btn-primary btn-block" id="filt2" (click)="sortByPriceDesc()">Sort by Price - Descending </button>
   <button class="btn btn-primary btn-block" id="filt3" (click)="sortByName()">Sort by Name - A to Z</button>

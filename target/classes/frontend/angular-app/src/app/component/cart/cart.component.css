@@ -75,3 +75,30 @@ h4, h6{
   height: 120px;
   display: flex;
 }
+mat-spinner{
+  margin-top: 7px;
+}
+input{
+  width: 30px;
+  align-items: center;
+}
+.fa-minus:hover{
+  color: #ff43e8;
+}
+.fa-plus:hover{
+  color: #ff43e8;
+}
+#exportExcel{
+  margin-left: 10px;
+  background-color: lightblue;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+#exportExcel:hover{
+  background-color: #6ba1ff;
+}
+#shopmore{
+  margin-right: 33.5px;
+}
+
